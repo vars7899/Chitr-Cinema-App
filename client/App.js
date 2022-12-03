@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from "react-native";
+import HomeScreen from "./views/HomeScreen";
+import OnBoardingScreen from "./views/OnBoardingScreen";
+import SeatScreen from "./views/SeatScreen/SeatScreen";
+import TicketScreen from "./views/TicketScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* <OnBoardingScreen /> */}
+      {/* <HomeScreen /> */}
+      <TicketScreen />
+      {/* <SeatScreen /> */}
     </View>
   );
 }
@@ -13,8 +18,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    paddingTop: StatusBar.currentHeight,
+    alignItems: "center",
   },
 });
