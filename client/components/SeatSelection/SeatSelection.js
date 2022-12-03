@@ -56,27 +56,39 @@ const SeatSelection = () => {
       {seatRow.map((item, indexRow) => (
         <View style={styles.seatRow}>
           {item.map((seat, indexColumn) => (
-            <TouchableOpacity
-              style={{ padding: 4 }}
-              onPress={() => handleSelect(indexRow, indexColumn)}
-              activeOpacity={0.75}
+            <View
+              style={
+                // add some gap for row and column
+                [
+                  (indexColumn === 3 || indexColumn === 7) && {
+                    marginLeft: 15,
+                  },
+                ]
+              }
             >
-              <MaterialCommunityIcons
-                name="sofa-single"
-                size={24}
-                color={
-                  selectedSeats.find(
-                    (cur) => indexRow === cur.row && indexColumn === cur.col
-                  )
-                    ? theme.color.blue
-                    : unAvailableSeats.find(
-                        (cur) => indexRow === cur.row && indexColumn === cur.col
-                      )
-                    ? theme.color.grey
-                    : theme.color.green
-                }
-              />
-            </TouchableOpacity>
+              <TouchableOpacity
+                style={{ padding: 4 }}
+                onPress={() => handleSelect(indexRow, indexColumn)}
+                activeOpacity={0.75}
+              >
+                <MaterialCommunityIcons
+                  name="sofa-single"
+                  size={24}
+                  color={
+                    selectedSeats.find(
+                      (cur) => indexRow === cur.row && indexColumn === cur.col
+                    )
+                      ? theme.color.blue
+                      : unAvailableSeats.find(
+                          (cur) =>
+                            indexRow === cur.row && indexColumn === cur.col
+                        )
+                      ? theme.color.grey
+                      : theme.color.green
+                  }
+                />
+              </TouchableOpacity>
+            </View>
           ))}
         </View>
       ))}

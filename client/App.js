@@ -9,8 +9,8 @@ export default function App() {
     <View style={styles.container}>
       {/* <OnBoardingScreen /> */}
       {/* <HomeScreen /> */}
-      {/* <TicketScreen /> */}
-      <SeatScreen />
+      <TicketScreen />
+      {/* <SeatScreen /> */}
     </View>
   );
 }

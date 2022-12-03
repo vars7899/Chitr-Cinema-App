@@ -16,9 +16,8 @@ const TicketScreen = () => {
   useEffect(() => {
     (async () => {
       const { status } = await Brightness.requestPermissionsAsync();
-      console.log(initialBrightness);
-      if (initialBrightness && status === "granted") {
-        Brightness.setBrightnessAsync(1.75);
+      if (status === "granted") {
+        Brightness.setBrightnessAsync(1);
       }
     })();
     return () => Brightness.setBrightnessAsync(0.1);
