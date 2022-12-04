@@ -1,0 +1,86 @@
+export default [
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+  {
+    name: "Cineplex Park Royal",
+    street: "83843 Polder St",
+    city: "North Vancouver",
+    state: "BC",
+  },
+];
