@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   main: {
-    padding: 20,
+    // padding: 20,
     marginBottom: 50,
   },
 });

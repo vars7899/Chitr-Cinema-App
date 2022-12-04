@@ -13,8 +13,8 @@ export default function App() {
       {/* <HomeScreen /> */}
       {/* <TicketScreen /> */}
       {/* <SeatScreen /> */}
-      {/* <TheatreScreen /> */}
-      <TheatreMapDistance />
+      <TheatreScreen />
+      {/* <TheatreMapDistance /> */}
     </View>
   );
 }

@@ -90,6 +90,7 @@ const TheatreMapDistance = () => {
                 },
               })
             }
+            mode="DRIVING"
           />
         </MapView>
       </View>

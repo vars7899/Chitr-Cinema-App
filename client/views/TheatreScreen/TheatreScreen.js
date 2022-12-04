@@ -1,4 +1,4 @@
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import CurrentTabHeader from "../../components/CurrentTabHeader/CurrentTabHeader";
 import styles from "./TheatreScreenStyle";
 import theatre from "../../data/dummyTheatreList";
