@@ -8,6 +8,9 @@ const globalStyles = StyleSheet.create({
   greyText: {
     color: theme.color.grey,
   },
+  xlText: {
+    fontSize: 40,
+  },
   lgText: {
     fontSize: 24,
   },

@@ -17,7 +17,7 @@ const TheatreInfoCard = ({ theatre }) => {
   }
 
   function handleSelectTime(time) {
-    if (selectedTime === time) return setSelectedDate(null);
+    if (selectedTime === time) return setSelectedTime(null);
     setSelectedTime(time);
   }
 

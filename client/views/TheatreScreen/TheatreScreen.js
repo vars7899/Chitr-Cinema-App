@@ -1,8 +1,8 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
-import CurrentTabHeader from "../../components/CurrentTabHeader/CurrentTabHeader";
 import styles from "./TheatreScreenStyle";
+import { View, FlatList } from "react-native";
 import theatre from "../../data/dummyTheatreList";
 import TheatreInfoCard from "../../components/TheatreInfoCard/TheatreInfoCard";
+import CurrentTabHeader from "../../components/CurrentTabHeader/CurrentTabHeader";
 
 const TheatreScreen = () => {
   return (
