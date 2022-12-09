@@ -1,4 +1,7 @@
 const express = require("express");
+require("dotenv").config();
+require("./config/connectDB");
+require("colors");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary");
@@ -7,10 +10,12 @@ const userRouter = require("./routes/userRoutes");
 const theatreRouter = require("./routes/theatreRoutes");
 const adminRouter = require("./routes/adminRoutes");
 const movieRouter = require("./routes/movieRoutes");
+const ticketRouter = require("./routes/ticketRoutes");
 const cookieParser = require("cookie-parser");
-require("dotenv").config();
-require("./config/connectDB");
-require("colors");
+const {
+  createStripePaymentIntent,
+  paymentUpdates,
+} = require("./controllers/ticketController");
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -22,6 +27,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const BASE = "/api/v1";
 
+// send raw data to stripe endpoint
+app.use("/stripe", express.raw({ type: "*/*" }));
 // middleware
 app.use(express.json());
 app.use(cors());
@@ -45,6 +52,10 @@ app.use(`${BASE}/user`, userRouter);
 app.use(`${BASE}/theatre`, theatreRouter);
 app.use(`${BASE}/movie`, movieRouter);
 app.use(`${BASE}/admin`, adminRouter);
+app.use(`${BASE}/ticket`, ticketRouter);
+// stripe
+app.post(`${BASE}/create-payment-intent`, createStripePaymentIntent);
+app.post("/stripe", paymentUpdates);
 
 // error middleware
 app.use(errorHandler);

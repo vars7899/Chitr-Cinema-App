@@ -24,7 +24,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.8.0",
     "mongoose-autopopulate": "^0.16.1",
-    "sib-api-v3-sdk": "^8.4.2"
+    "sib-api-v3-sdk": "^8.4.2",
+    "stripe": "^11.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

@@ -9,22 +9,26 @@ import TicketScreen from "./views/TicketScreen";
 import { NativeBaseProvider } from "native-base";
 import SplashScreen from "./views/SplashScreen/SplashScreen";
 import RegisterScreen from "./views/Authentication/RegisterScreen";
+import { StripeProvider } from "@stripe/stripe-react-native";
+import { STRIPE_PK } from "./keys";
 
 export default function App() {
   return (
-    <NativeBaseProvider>
-      <View style={styles.container}>
-        <SplashScreen />
-        {/* <OnBoardingScreen /> */}
-        {/* <LoginScreen /> */}
-        {/* <RegisterScreen /> */}
-        {/* <HomeScreen /> */}
-        {/* <TicketScreen /> */}
-        {/* <SeatScreen /> */}
-        {/* <TheatreScreen /> */}
-        {/* <TheatreMapDistance /> */}
-      </View>
-    </NativeBaseProvider>
+    <StripeProvider publishableKey={STRIPE_PK}>
+      <NativeBaseProvider>
+        <View style={styles.container}>
+          {/* <SplashScreen /> */}
+          {/* <OnBoardingScreen /> */}
+          <LoginScreen />
+          {/* <RegisterScreen /> */}
+          {/* <HomeScreen /> */}
+          {/* <TicketScreen /> */}
+          {/* <SeatScreen /> */}
+          {/* <TheatreScreen /> */}
+          {/* <TheatreMapDistance /> */}
+        </View>
+      </NativeBaseProvider>
+    </StripeProvider>
   );
 }
 
